@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var $ = jQuery = function (){
+        //    console.log('haha');
+           return new jQuery.prototype.init();
+       }
+       jQuery.prototype = {
+           init:function()
+               {
+                   console.log('hehe');
+               },
+           name:'ls',
+           css:function(){
+               console.log('我是样式，来改我啊')
+           }
+       }
+
+       jQuery.prototype.init.prototype =  jQuery.prototype;
+    //    var $ = jQuery();
+    //    $().css();
+
+       $.extend = $.prototype.extend = function (){
+           console.log('我是ajax');
+       }
+
+       $.extend();
+       $().extend();
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>
